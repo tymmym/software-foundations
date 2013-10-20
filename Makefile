@@ -1,4 +1,4 @@
-VOFILES := Basics.vo Induction.vo Lists.vo Poly.vo MoreCoq.vo Prop.vo
+VOFILES := Basics.vo Induction.vo Lists.vo Poly.vo MoreCoq.vo Prop.vo MoreProp.vo
 
 .PHONY: all clean
 
