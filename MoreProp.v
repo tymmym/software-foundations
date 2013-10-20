@@ -153,8 +153,21 @@ Theorem plus_lt : forall n1 n2 m,
   n1 + n2 < m ->
   n1 < m /\ n2 < m.
 Proof.
- unfold lt.
-Admitted.
+  unfold lt. intros n1 n2 m H.
+  split.    (* eplained in Logic *)
+  Case "left".
+    induction n2 as [| n2'].
+    SCase "n2 = 0".
+      rewrite -> plus_0_r in H. apply H.
+    SCase "n2 = S n2'".
+      apply IHn2'. apply Sn_le_m__n_le_m.
+      rewrite <- plus_n_Sm in H. apply H.
+  Case "right".
+    induction n1 as [| n1'].
+    SCase "n1 = 0".
+      simpl in H. apply H.
+    SCase "n1 = S n1'".
+      apply IHn1'. apply Sn_le_m__n_le_m. apply H.  Qed.
 
 Theorem lt_S : forall n m,
   n < m ->
