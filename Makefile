@@ -1,5 +1,6 @@
 VOFILES := Basics.vo Induction.vo Lists.vo Poly.vo MoreCoq.vo Prop.vo \
-           MoreProp.vo Logic.vo Imp.vo Equiv.vo Hoare.vo Hoare2.vo
+           MoreProp.vo Logic.vo Imp.vo Equiv.vo Hoare.vo Hoare2.vo \
+           HoareList.vo
 
 .PHONY: all clean
 
